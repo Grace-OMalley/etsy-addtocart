@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import API from './API.js';
 import './styles.css';
 
 class App extends React.Component {
@@ -7,7 +8,14 @@ class App extends React.Component {
     super(props);
     this.state = {
       item: ''
-    }
+    };
+    //func bind here
+  }
+
+  componentDidMount() {
+    API.readAll((data) => {
+      console.log('CLIENT DATA: ', data);
+    });
   }
 
   render() {
@@ -15,7 +23,7 @@ class App extends React.Component {
       <div>
         <h1>Etsy.com</h1>
       </div>
-    )
+    );
   }
 }
 
