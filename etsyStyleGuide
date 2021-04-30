@@ -1,0 +1,27 @@
+1. Outer Div
+    1. Title Div
+        1. Brand Name (Text)
+        2. Total Sales (Text)
+        3. Avg Rating (Icon)
+        4. Product Name (Text)
+    2. Price Div
+        1. Product Price (text)
+        2. In Stock (Icon/Text)
+    3. Specifications Div
+        1. Sizes (Dropdown Menu/Text)
+    4. Add to Cart Div
+        1. Add to Cart (Button/Text)
+    5. ‘Others Want This Item’ Div
+        1. Cart Img (Icon)
+        2. Number of People who are Interested (Text)
+    6. ‘Arrives By’ Div
+        1. Truck Img (Icon)
+        2. Arrives by Info (Text)
+    7. Item Details Div
+        1. Item Details (Text)
+        2. Collapse Button (Icon)
+    8. Description Div
+        1. Item Description (Text)
+        2. Collapse Button (Icon)
+        3. Fade (Effect)
+        4. Learn more about this Item (Button/Text)

@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      item: ''
+      item: {}
     };
     //func bind here
   }
@@ -15,6 +15,9 @@ class App extends React.Component {
   componentDidMount() {
     API.readAll((data) => {
       console.log('CLIENT DATA: ', data);
+      this.setState({
+        item: data
+      });
     });
   }
 
