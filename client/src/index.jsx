@@ -43,7 +43,9 @@ class App extends React.Component {
         <ArrivesBy item={this.state.item}/>
         <br/>
         <br/>
+        <br/>
         <ItemDetails item={this.state.item}/>
+        <br/>
         <br/>
         <ItemDescription item={this.state.item}/>
       </div>
