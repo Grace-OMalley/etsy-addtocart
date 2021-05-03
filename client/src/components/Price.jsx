@@ -4,17 +4,23 @@ const Price = (props) => {
   if (props.item.inventoryCount > 0) {
     return (
       <div className="price">
-        <h2>${props.item.price}+</h2>
-        <h4>✓  In Stock</h4>
+        <div>
+          <h2>${props.item.price}+</h2>
+        </div>
+        <div>
+          <h5>✓  In Stock</h5>
+        </div>
       </div>
     )
   } else {
     return (
       <div className="price">
-        <span>
+        <div>
           <h2>${props.item.price}+</h2>
-          <h4>Out of Stock</h4>
-        </span>
+        </div>
+        <div>
+          <h5>Out of Stock</h5>
+        </div>
       </div>
     )
   }

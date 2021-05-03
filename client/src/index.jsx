@@ -18,7 +18,6 @@ class App extends React.Component {
     this.state = {
       item: {}
     };
-    //func bind here
   }
 
   componentDidMount() {
@@ -30,18 +29,22 @@ class App extends React.Component {
     });
   }
 
-
-
   render() {
     return (
       <div className="outerDiv">
         <Title item={this.state.item}/>
         <Price item={this.state.item}/>
         <Specifications item={this.state.item}/>
+        <br/>
         <AddToCart item={this.state.item}/>
+        <br/>
         <OthersFavorited item={this.state.item}/>
+        <br/>
         <ArrivesBy item={this.state.item}/>
+        <br/>
+        <br/>
         <ItemDetails item={this.state.item}/>
+        <br/>
         <ItemDescription item={this.state.item}/>
       </div>
     );

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const AddToCart = (props) => (
-  <div>
-    <input className="button" defaultValue="Add to cart"></input>
+  <div className="buttonbox">
+    <input className="button" type="button" defaultValue="Add to cart"></input>
   </div>
 );
 
