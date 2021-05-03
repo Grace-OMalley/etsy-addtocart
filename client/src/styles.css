@@ -3,6 +3,7 @@ body {
 }
 h1, h4 {
   margin: 0px;
+  font-weight: normal;
 }
 .outerDiv {
   /* border: 1px solid black;
@@ -13,6 +14,7 @@ h1, h4 {
 }
 .title {
   margin: 0px;
+  font-weight: normal;
 }
 .title:hover {
   margin: 0px;
@@ -22,6 +24,7 @@ h1, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: normal;
 }
 .buttonbox, .specbox, .quantbox {
   text-align: center;
@@ -33,6 +36,18 @@ h1, h4 {
   border-radius: 25px;
   width: 100%;
   height: 48px;
+  transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.button:hover {
+  border: 1px solid black;
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  width: 100%;
+  height: 48px;
+  box-shadow: 0px 0px 0px 2px black;
+  border-radius: 25px;
+  transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .sizetext, .quanttext{
   font-size: 12px;
@@ -51,6 +66,7 @@ h1, h4 {
 }
 .shiptext, .carttext {
   font-size: 12px;
+  font-weight: normal;
   margin: 0px;
 }
 .img {
@@ -74,7 +90,7 @@ h1, h4 {
   border-radius: 25px;
 }
 .descheader:hover, .detailheader:hover {
-  box-shadow: 0px 0px 0px 14px rgba(128, 128, 128, 0.119);
+  box-shadow: 0px 0px 0px 12px rgba(128, 128, 128, 0.119);
   border-radius: 25px;
   background-color: rgba(128, 128, 128, 0.119);
   transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -89,6 +105,7 @@ h1, h4 {
   border-radius: 6px;
   border: 1px solid rgba(128, 128, 128, 0.233);
   box-shadow: 0px 0px 5px 4px rgba(128, 128, 128, 0.084);
+  transition: box-shadow 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .specs:hover, .quant:hover {
   width: 100%;
@@ -106,6 +123,14 @@ h1, h4 {
   font-size: 12px;
   background-color: white;
   border: white;
+  border-radius: 25px;
+  transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.learnmore:hover {
+  box-shadow: 0px 0px 0px 10px rgba(128, 128, 128, 0.119);
+  border-radius: 25px;
+  background-color: rgba(128, 128, 128, 0.119);
+  transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .uparrow {
   width: 12px;
