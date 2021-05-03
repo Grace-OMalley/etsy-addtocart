@@ -3,7 +3,7 @@ body {
 }
 h1, h4 {
   margin: 0px;
-  font-weight: normal;
+  font-weight: bold;
 }
 .outerDiv {
   /* border: 1px solid black;
@@ -19,6 +19,7 @@ h1, h4 {
 .title:hover {
   margin: 0px;
   text-decoration: underline;
+  cursor: pointer;
 }
 .price {
   display: flex;
@@ -48,21 +49,49 @@ h1, h4 {
   box-shadow: 0px 0px 0px 2px black;
   border-radius: 25px;
   transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
-.sizetext, .quanttext{
+.sizetext, .quanttext {
   font-size: 12px;
   margin: 6px 0px 6px 0px;
 }
-.detailtext{
+.detailtext {
   font-size: 12px;
+  font-weight: normal;
   margin: 0px 6px 0px 0px;
+  height:13.64px;
+  transition: height 0.3s;
+  overflow: hidden;
+}
+.detailtexthide {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0px 6px 0px 0px;
+  height: 0px;
+  transition: height 0.3s;
+  overflow: hidden;
 }
 .desctext {
   font-size: 12px;
+  font-weight: normal;
   margin: 0px 6px 0px 0px;
   background: linear-gradient(to top, #eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  transition: height 0.3s;
+  overflow: hidden;
+  height: 30px;
+}
+.desctexthide {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0px 6px 0px 0px;
+  background: linear-gradient(to top, #eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  height: 0px;
+  transition: height 0.3s;
+  overflow: hidden;
 }
 .shiptext, .carttext {
   font-size: 12px;
@@ -82,18 +111,33 @@ h1, h4 {
 .desc {
   width: 100%;
 }
-.descheader, .detailheader {
+.descheader {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border-radius: 25px;
 }
-.descheader:hover, .detailheader:hover {
+.descheader:hover {
   box-shadow: 0px 0px 0px 12px rgba(128, 128, 128, 0.119);
   border-radius: 25px;
   background-color: rgba(128, 128, 128, 0.119);
   transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+.detailheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-radius: 25px;
+}
+.detailheader:hover {
+  box-shadow: 0px 0px 0px 12px rgba(128, 128, 128, 0.119);
+  border-radius: 25px;
+  background-color: rgba(128, 128, 128, 0.119);
+  transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 .star {
   width: 12px;
@@ -114,6 +158,7 @@ h1, h4 {
   border: 1px solid rgba(128, 128, 128, 0.687);
   box-shadow: 0px 0px 5px 4px rgba(128, 128, 128, 0.185);
   transition: box-shadow 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 .learnmorebox {
   width: 100%;
@@ -131,9 +176,17 @@ h1, h4 {
   border-radius: 25px;
   background-color: rgba(128, 128, 128, 0.119);
   transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
 }
 .uparrow {
   width: 12px;
   height: 6px;
   margin-right: 6px;
+}
+.uparrowflip {
+  width: 12px;
+  height: 6px;
+  margin-right: 6px;
+  -webkit-transition: -webkit-transform 0.25s ease-in;
+  -webkit-transform: rotate(180deg);
 }

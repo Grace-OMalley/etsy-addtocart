@@ -16,16 +16,33 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      detailToggle: true,
+      descToggle: true,
       item: {}
     };
+    this.detailClick = this.detailClick.bind(this);
+    this.descClick = this.descClick.bind(this);
   }
 
   componentDidMount() {
     API.readAll((data) => {
-      console.log('CLIENT DATA: ', data);
       this.setState({
         item: data
       });
+    });
+  }
+
+  detailClick() {
+    console.log('DETAIL CLICK!');
+    this.setState({
+      detailToggle: !this.state.detailToggle
+    });
+  }
+
+  descClick() {
+    console.log('DESC CLICK!');
+    this.setState({
+      descToggle: !this.state.descToggle
     });
   }
 
@@ -44,10 +61,18 @@ class App extends React.Component {
         <br/>
         <br/>
         <br/>
-        <ItemDetails item={this.state.item}/>
+        <ItemDetails
+          item={this.state.item}
+          detailClick={this.detailClick}
+          toggle={this.state.detailToggle}
+        />
         <br/>
         <br/>
-        <ItemDescription item={this.state.item}/>
+        <ItemDescription
+          item={this.state.item}
+          descClick={this.descClick}
+          toggle={this.state.descToggle}
+        />
       </div>
     );
   }
