@@ -3,7 +3,7 @@ body {
 }
 h1, h4 {
   margin: 0px;
-  font-weight: bold;
+  font-weight: normal;
 }
 .outerDiv {
   /* border: 1px solid black;
@@ -53,6 +53,7 @@ h1, h4 {
 }
 .sizetext, .quanttext {
   font-size: 12px;
+  font-weight: normal;
   margin: 6px 0px 6px 0px;
 }
 .detailtext {
@@ -189,4 +190,52 @@ h1, h4 {
   margin-right: 6px;
   -webkit-transition: -webkit-transform 0.25s ease-in;
   -webkit-transform: rotate(180deg);
+}
+.bestseller {
+  text-decoration: underline dotted;
+  font-weight: normal;
+  border: 1px solid rgba(208, 166, 112, 0.372);
+  background-color: rgba(208, 166, 112, 0.372);
+  border-radius: 25px;
+}
+.bestseller:hover {
+  text-decoration: underline dotted;
+  font-weight: normal;
+  border: 1px solid rgba(208, 166, 112, 0.372);
+  background-color: rgba(208, 166, 112, 0.372);
+  border-radius: 25px;
+  cursor: help;
+}
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 250px;
+  top: 15px;
+  left: -104px;
+  font-size: 14px;
+  background-color: white;
+  color: black;
+  padding: 12px;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 1;
+}
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgb(255, 255, 255) transparent;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  border: 1px solid rgba(128, 128, 128, 0.242);
+  box-shadow: 0px 0px 15px 10px rgba(128, 128, 128, 0.185);
+  transition: box-shadow 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }

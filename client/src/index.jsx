@@ -5,6 +5,7 @@ import './styles.css';
 
 import Title from './components/Title.jsx';
 import Price from './components/Price.jsx';
+import BestSeller from './components/BestSeller.jsx';
 import Specifications from './components/Specifications.jsx';
 import AddToCart from './components/AddToCart.jsx';
 import OthersFavorited from './components/OthersFavorited.jsx';
@@ -50,6 +51,8 @@ class App extends React.Component {
     return (
       <div className="outerDiv">
         <Title item={this.state.item}/>
+        <br/>
+        <BestSeller item={this.state.item}/>
         <Price item={this.state.item}/>
         <Specifications item={this.state.item}/>
         <br/>

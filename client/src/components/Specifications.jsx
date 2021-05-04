@@ -8,6 +8,7 @@ const Specifications = (props) => {
         <h6 className="sizetext">Sizes</h6>
         <div className="specbox">
           <select className="specs" placeholder="Select an option">
+            <option>Select an option</option>
             {props.item.specifications.map((size, index) => (
               <SpecificationsItem
                 key={index}

@@ -8,7 +8,7 @@ const ItemDetails = (props) => {
           <h4>Highlights</h4>
           <img className="uparrow" src="arrowUp.png"></img>
         </div>
-        <br />
+        <br/>
         <h6 className="detailtext">Materials: {props.item.itemDetails}</h6>
       </div>
     )
@@ -19,7 +19,7 @@ const ItemDetails = (props) => {
           <h4>Highlights</h4>
           <img className="uparrowflip" src="arrowUp.png"></img>
         </div>
-        <br />
+        <br/>
         <h6 className="detailtexthide">Materials: {props.item.itemDetails}</h6>
       </div>
     )
