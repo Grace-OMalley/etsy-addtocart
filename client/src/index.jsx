@@ -19,10 +19,12 @@ class App extends React.Component {
     this.state = {
       detailToggle: true,
       descToggle: true,
+      expand: false,
       item: {}
     };
     this.detailClick = this.detailClick.bind(this);
     this.descClick = this.descClick.bind(this);
+    this.expandClick = this.expandClick.bind(this);
   }
 
   componentDidMount() {
@@ -44,6 +46,13 @@ class App extends React.Component {
     console.log('DESC CLICK!');
     this.setState({
       descToggle: !this.state.descToggle
+    });
+  }
+
+  expandClick() {
+    console.log('EXPAND CLICK!');
+    this.setState({
+      expand: !this.state.expand
     });
   }
 
@@ -75,6 +84,8 @@ class App extends React.Component {
           item={this.state.item}
           descClick={this.descClick}
           toggle={this.state.descToggle}
+          expandClick={this.expandClick}
+          expand={this.state.expand}
         />
       </div>
     );
