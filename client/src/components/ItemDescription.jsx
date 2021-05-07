@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ItemDescription = (props) => {
-  if (props.expand) {
+  if (props.toggle && props.expand) {
     return (
       <div className="desc">
         <div className="descheader" onClick={() => props.descClick()}>
