@@ -2,6 +2,12 @@ import React from 'react';
 import SpecificationsItem from './SpecificationsItem.jsx';
 
 const Specifications = (props) => {
+  let quantArray = [];
+  for (let i = 1; i < props.item.inventoryCount; i++) {
+    if (i < 1000) {
+      quantArray.push(<option key={i}>{i}</option>);
+    }
+  }
   if (props.item.specifications) {
     return (
       <div>
@@ -21,15 +27,7 @@ const Specifications = (props) => {
         <h6 className="quanttext">Quantity</h6>
         <div className="quantbox">
           <select className="quant">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
+            {quantArray}
           </select>
         </div>
       </div>
