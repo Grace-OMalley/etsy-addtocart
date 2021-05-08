@@ -194,6 +194,8 @@ h1, h4 {
   width: 12px;
   height: 6px;
   margin-right: 6px;
+  -webkit-transition: -webkit-transform 0.25s ease-in;
+  -webkit-transform: rotate(360deg);
 }
 .uparrowflip {
   width: 12px;
