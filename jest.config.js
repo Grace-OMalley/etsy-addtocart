@@ -193,5 +193,6 @@ module.exports = {
   // watchman: true,
   moduleNameMapper: {
     '\\.(css|scss)$': 'identity-obj-proxy'
-  }
+  },
+  'preset': 'jest-puppeteer'
 };

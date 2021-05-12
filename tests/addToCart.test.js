@@ -1,34 +1,36 @@
-import TestRenderer from 'react-test-renderer';
-import React from 'react';
-import renderer from 'react-test-renderer';
-import Title from '../client/src/components/Title.jsx';
-import styles from '../client/src/styles.css';
+import 'regenerator-runtime/runtime';
+const puppeteer = require('puppeteer');
+const pageUrl = 'http://localhost:3000/';
 
-const item = {
-  specifications: [
-    [ 'Extra Small' ],
-    [ 'Small' ],
-    [ 'Medium' ],
-    [ 'Large' ],
-    [ 'Extra Large' ]
-  ],
-  // _id: 6088edca4912fe3bada3375f,
-  brandName: 'Jones - Morar',
-  numberOfSales: 53156,
-  reviewAvg: 3,
-  itemName: 'Incredible Concrete Chicken',
-  price: 297,
-  inventoryCount: 11656,
-  shippingHandlingTime: 1620796106543,
-  itemDetails: 'Metal',
-  itemDescription: 'The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients',
-  __v: 0
-};
+let page;
+let browser;
+const width = 1280;
+const height = 720;
 
-test('First Jest-React Test', () => {
-  const component = renderer.create(
-    <Title item={item}/>
-  );
-  let tree = component.toJSON();
-  expect(component).toMatchSnapshot();
+beforeAll(async () => {
+  browser = await puppeteer.launch({
+    headless: false,
+    slowMo: 80,
+    args: [`--window-size=${width},${height}`]
+  });
+  page = await browser.newPage();
+  await page.setViewport({ width, height });
+});
+
+afterAll(async () => {
+  browser.close();
+});
+
+describe('brand name render', async () => {
+
+  beforeEach(async () => {
+    await page.goto(pageUrl, {waitUntil: 'networkidle2'});
+  });
+
+  test('renders brand name upon page load', async () => {
+    var div = '.title';
+    const brandName = await page.$eval(div, e => e.textContent);
+    expect(brandName).toEqual('Jones - Morar');
+  });
+
 });
