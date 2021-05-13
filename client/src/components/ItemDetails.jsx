@@ -11,7 +11,7 @@ const ItemDetails = (props) => {
         <br/>
         <h6 className="detailtext">Materials: {props.item.itemDetails}</h6>
       </div>
-    )
+    );
   } else {
     return (
       <div>
@@ -22,7 +22,7 @@ const ItemDetails = (props) => {
         <br/>
         <h6 className="detailtexthide">Materials: {props.item.itemDetails}</h6>
       </div>
-    )
+    );
   }
 };
 

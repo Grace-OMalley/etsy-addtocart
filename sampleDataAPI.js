@@ -1,6 +1,7 @@
 //url
-'https://localhost:3000/addToCart'
+'https://localhost:3000/addtocart'
 
+//sample data
 {
   specifications: [
     ['Extra Small'],

@@ -11,9 +11,9 @@ module.exports = {
       price: faker.commerce.price(),
       specifications: ['Extra Small', 'Small', 'Medium', 'Large', 'Extra Large'],
       inventoryCount: faker.datatype.number(),
-      shippingHandlingTime: moment(new Date(), "DD-MM-YYYY").add(14, 'days'),
+      shippingHandlingTime: moment(new Date(), 'DD-MM-YYYY').add(14, 'days'),
       itemDetails: faker.commerce.productMaterial(),
       itemDescription: faker.commerce.productDescription()
-   }
+    }
   )
 };

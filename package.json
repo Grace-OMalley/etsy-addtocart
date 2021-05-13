@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "nodemon server/index.js",
-    "build": "webpack -d source-map --watch"
+    "build": "webpack -d source-map --watch",
+    "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -28,10 +29,17 @@
     "@babel/core": "^7.13.16",
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
+    "@testing-library/react": "^11.2.6",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.4",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^26.6.3",
+    "jest-puppeteer": "^5.0.3",
     "mini-css-extract-plugin": "^1.5.0",
+    "puppeteer": "^9.1.1",
+    "react-test-renderer": "^17.0.2",
     "style-loader": "^2.0.0",
     "webpack": "^5.35.1",
     "webpack-cli": "^4.6.0",
