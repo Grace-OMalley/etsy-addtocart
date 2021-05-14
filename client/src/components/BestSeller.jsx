@@ -8,11 +8,11 @@ const BestSeller = (props) => {
         <BestSellerTip />
         <input className="bestseller" type="button" value="Bestseller"/>
       </div>
-    )
+    );
   } else {
     return (
-      <div></div>
-    )
+      <div className="tooltip"></div>
+    );
   }
 };
 
