@@ -26,16 +26,16 @@ const Title = (props) => {
       <div>
         <h4 className="title">{props.item.brandName}</h4>
         <span>{sales} sales | </span>
-          {starArray}
+        {starArray}
         <br />
         <br />
         <h1>{props.item.itemName}</h1>
       </div>
-    )
+    );
   } else {
     return (
       <div></div>
-    )
+    );
   }
 };
 
