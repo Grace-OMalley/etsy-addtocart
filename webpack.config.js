@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'addToCartBundle.js',
     path: __dirname + '/client/dist'
   },
   mode: 'development'
