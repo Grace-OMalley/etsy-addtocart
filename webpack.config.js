@@ -23,7 +23,7 @@ module.exports = {
     ]
   },
   output: {
-    filename: `addToCartBundle${Date.now()}.js`,
+    filename: 'addToCartBundle.js',
     path: __dirname + '/client/dist'
   },
   mode: 'development'
