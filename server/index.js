@@ -10,6 +10,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/addtocart', (req, res) => {
+  // for (let i = 0; i < 100; i++) {
+  //   db.save(fakeData.gen(), (err, data) => {
+  //     console.log('k');
+  //   });
+  // }
   let query = {};
   db.find(query, (err, data) => {
     if (err) {
