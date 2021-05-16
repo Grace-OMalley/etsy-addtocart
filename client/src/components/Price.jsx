@@ -8,10 +8,10 @@ const Price = (props) => {
           <h2>${props.item.price}+</h2>
         </div>
         <div>
-          <h5>✓  In Stock</h5>
+          <h5 className="instock">✓  In Stock</h5>
         </div>
       </div>
-    )
+    );
   } else {
     return (
       <div className="price">
@@ -19,10 +19,10 @@ const Price = (props) => {
           <h2>${props.item.price}+</h2>
         </div>
         <div>
-          <h5>Out of Stock</h5>
+          <h5 className="outofstock">Out of Stock</h5>
         </div>
       </div>
-    )
+    );
   }
 };
 
