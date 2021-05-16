@@ -38,7 +38,7 @@ module.exports = {
       }
     });
   }
-}
+};
 
 /***/ }),
 
@@ -63558,7 +63558,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_6__.Component);
 
-react_dom__WEBPACK_IMPORTED_MODULE_7__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(App, null), document.getElementById('app'));
+react_dom__WEBPACK_IMPORTED_MODULE_7__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(App, null), document.getElementById('addToCart'));
 })();
 
 /******/ })()
