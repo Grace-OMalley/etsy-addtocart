@@ -31,11 +31,11 @@ const Specifications = (props) => {
           </select>
         </div>
       </div>
-    )
+    );
   } else {
     return (
       <div></div>
-    )
+    );
   }
 };
 
