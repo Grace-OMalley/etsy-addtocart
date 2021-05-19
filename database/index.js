@@ -11,6 +11,7 @@ db.on('error', (error) => {
 });
 
 let addToCartItem = mongoose.Schema({
+  itemId: Number,
   brandName: String,
   numberOfSales: Number,
   reviewAvg: Number,
@@ -18,7 +19,6 @@ let addToCartItem = mongoose.Schema({
   price: Number,
   specifications: [Array],
   inventoryCount: Number,
-  shippingHandlingTime: Number,
   itemDetails: String,
   itemDescription: String
 });
@@ -28,6 +28,7 @@ let Item = mongoose.model('Item', addToCartItem);
 let save = (item, callback) => {
   console.log('DB SAVE: ', item);
   let Doc = new Item({
+    itemId: item.itemId,
     brandName: item.brandName,
     numberOfSales: item.numberOfSales,
     reviewAvg: item.reviewAvg,
