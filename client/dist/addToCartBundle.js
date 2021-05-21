@@ -25,10 +25,8 @@ module.exports = {
   },
   readOne: (options, callback) => {
     $.ajax({
-      url: '/addtocart',
-      type: 'POST',
-      data: JSON.stringify(options),
-      contentType: 'application/json',
+      url: '/addtocart/' + options,
+      type: 'GET',
       success: (data) => {
         console.log('SUCCESS AJAX REQ!');
         callback(data);
@@ -703,7 +701,7 @@ var Title = function Title(props) {
     }
   }
 
-  if (props.item.numberOfSales && props.item.reviewAvg && props.item.brandName) {
+  if (props.item.numberOfSales && props.item.brandName) {
     var count = 0;
     var numberSales = [];
     var numArray = props.item.numberOfSales.toString().split('');
@@ -727,7 +725,7 @@ var Title = function Title(props) {
       className: "reviewstars"
     }, starArray), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h1", null, props.item.itemName));
   } else {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", null, "Loading...");
   }
 };
 
@@ -63496,7 +63494,10 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      _API_js__WEBPACK_IMPORTED_MODULE_8___default().readAll(function (data) {
+      var queryString = window.location.search.slice(8) || '1';
+      _API_js__WEBPACK_IMPORTED_MODULE_8___default().readOne(queryString, function (data) {
+        console.log('CLIENT: ', data);
+
         _this2.setState({
           item: data
         });

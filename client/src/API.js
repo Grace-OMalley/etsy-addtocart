@@ -16,10 +16,8 @@ module.exports = {
   },
   readOne: (options, callback) => {
     $.ajax({
-      url: '/addtocart',
-      type: 'POST',
-      data: JSON.stringify(options),
-      contentType: 'application/json',
+      url: '/addtocart/' + options,
+      type: 'GET',
       success: (data) => {
         console.log('SUCCESS AJAX REQ!');
         callback(data);

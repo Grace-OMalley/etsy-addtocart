@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const port = 3000;
 const db = require('../database/index.js');
 const fakeData = require('../fakeData/fakeData.js');
 const faker = require('faker');
+const cors = require('cors');
+const morgan = require('morgan');
+const port = 3000;
 
 app.use(express.static('client/dist'));
+// app.use(morgan('dev'));
+app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -30,20 +34,12 @@ app.get('/addtocart', (req, res) => {
   //   });
   // }
   //===============================================================//
-  let query = {};
-  db.find(query, (err, data) => {
-    if (err) {
-      res.status(400).send(err);
-    } else {
-      console.log('SERVER GET DATA:', data[1]);
-      res.status(200).send(data[1]);
-    }
-  });
+  // });
 });
 
-app.post('/addtocart', (req, res) => {
-  let query = {};
-  db.find(query, (err, data) => {
+app.get('/addtocart/:itemId', (req, res) => {
+  console.log('Server Query:', req.params.itemId);
+  db.find({itemId: req.params.itemId}, (err, data) => {
     if (err) {
       res.status(400).send(err);
     } else {

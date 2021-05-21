@@ -28,7 +28,9 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    API.readAll((data) => {
+    const queryString = window.location.search.slice(8) || '1';
+    API.readOne(queryString, (data) => {
+      console.log('CLIENT: ', data);
       this.setState({
         item: data
       });
