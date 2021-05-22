@@ -283,7 +283,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ArrivesBy = function ArrivesBy(props) {
-  var timestamp = moment__WEBPACK_IMPORTED_MODULE_1___default()(Date.now()).add(6, 'days').format("MMM Do YY").slice(0, -5);
+  var timestamp = moment__WEBPACK_IMPORTED_MODULE_1___default()(Date.now()).add(6, 'days').format('MMM Do YY').slice(0, -5);
   var timestampRange = Number(timestamp.slice(-2)) + 3;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "shipbox"
@@ -294,7 +294,9 @@ var ArrivesBy = function ArrivesBy(props) {
     className: "shiptext"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Arrives by ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "shiptime"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("u", null, timestamp, "-", timestampRange), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ShipByInfo_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null))), " if you order today.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Hooray!"), " This item ships free to the US."));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("u", {
+    className: "timetest"
+  }, timestamp, "-", timestampRange), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_ShipByInfo_jsx__WEBPACK_IMPORTED_MODULE_2__.default, null))), " if you order today.", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("br", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Hooray!"), " This item ships free to the US."));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ArrivesBy);
