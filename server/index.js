@@ -9,7 +9,7 @@ const morgan = require('morgan');
 const port = 3000;
 
 app.use(express.static('client/dist'));
-// app.use(morgan('dev'));
+app.use(morgan('dev'));
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -34,7 +34,6 @@ app.get('/addtocart', (req, res) => {
   //   });
   // }
   //===============================================================//
-  // });
 });
 
 app.get('/addtocart/:itemId', (req, res) => {
