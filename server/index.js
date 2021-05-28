@@ -42,7 +42,7 @@ app.get('/addtocart/:itemId', (req, res) => {
     if (err) {
       res.status(400).send(err);
     } else {
-      console.log('SERVER POST DATA:', data[0]);
+      console.log('SERVER POST-DATA:', data[0]);
       res.status(200).send(data[0]);
     }
   });

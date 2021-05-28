@@ -1,8 +1,25 @@
 version: "3"
 services:
-  etsy:
-    build: .
+  react-app:
+    image: addtocart
+    stdin_open: true
     ports:
       - "3000:3000"
+    networks:
+      - mern-app
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - mern-app
     volumes:
-      - ./client:/app/client:ro
+      - mongo-data:/data/db
+networks:
+  mern-app:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

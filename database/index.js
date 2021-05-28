@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/addToCart');
+mongoose.connect('mongodb://mongo:27017/addToCart');
 let db = mongoose.connection;
 
 db.once('open', () => {
