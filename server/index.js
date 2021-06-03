@@ -30,9 +30,14 @@ app.get('/addtocart', (req, res) => {
   //     itemDescription: faker.commerce.productDescription()
   //   };
   //   db.save(dummyData, (err, data) => {
-  //     console.log('SERVER - Saved to DB...');
+  //     if (err) {
+  //       res.status(400).send('SERVER - Failed to save');
+  //     } else {
+  //       console.log('SERVER - Saved to DB...');
+  //     }
   //   });
   // }
+  // res.status(201).send('success');
   //===============================================================//
 });
 
@@ -52,4 +57,4 @@ app.listen(port, () => {
   console.log(`Listening to Port: ${port}`);
 });
 
-//Server Design by Devon Poston
+//Server Design by Devon Poston - SDC Team: Slack me for questions

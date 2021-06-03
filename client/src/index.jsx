@@ -95,3 +95,5 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App />, document.getElementById('addToCart'));
+
+//Client-side design by Devon Poston - SDC TEAM: Slack me for questions

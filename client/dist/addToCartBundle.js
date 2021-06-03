@@ -12,8 +12,9 @@ const $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.j
 module.exports = {
   readAll: (callback) => {
     $.ajax({
-      url: '/addtocart',
+      url: 'http://54.193.75.141:3000/addtocart',
       type: 'GET',
+      crossDomain: true,
       success: (data) => {
         console.log('SUCCESS AJAX REQ!');
         callback(data);
@@ -25,8 +26,9 @@ module.exports = {
   },
   readOne: (options, callback) => {
     $.ajax({
-      url: '/addtocart/' + options,
+      url: 'http://54.193.75.141:3000/addtocart/' + options,
       type: 'GET',
+      crossDomain: true,
       success: (data) => {
         console.log('SUCCESS AJAX REQ!');
         callback(data);
@@ -63565,7 +63567,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_6__.Component);
 
-react_dom__WEBPACK_IMPORTED_MODULE_7__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(App, null), document.getElementById('addToCart'));
+react_dom__WEBPACK_IMPORTED_MODULE_7__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(App, null), document.getElementById('addToCart')); //Client-side design by Devon Poston - SDC TEAM: Slack me for questions
 })();
 
 /******/ })()

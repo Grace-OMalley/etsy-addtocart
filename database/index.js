@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://mongo:27017/addToCart');
+mongoose.connect('mongodb://localhost/addToCart', {useNewUrlParser: true, useUnifiedTopology: true});
 let db = mongoose.connection;
 
 db.once('open', () => {
@@ -66,4 +66,4 @@ let find = (item, callback) => {
 
 module.exports = {save, find};
 
-//Database Design by Devon Poston
+//Database Design by Devon Poston - SDC Team: Slack me for questions
