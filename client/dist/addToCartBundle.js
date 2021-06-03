@@ -291,7 +291,7 @@ var ArrivesBy = function ArrivesBy(props) {
     className: "shipbox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "img",
-    src: "https://www.pngitem.com/pimgs/m/483-4838442_truck-icon-truck-vector-png-transparent-png.png"
+    src: "truck.png"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", {
     className: "shiptext"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Arrives by ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
@@ -514,7 +514,7 @@ var OthersFavorited = function OthersFavorited(props) {
     className: "cartbox"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("img", {
     className: "img",
-    src: "https://www.pngitem.com/pimgs/m/522-5227702_shopping-cart-of-checkered-design-shopping-cart-vector.png"
+    src: "cart.png"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("h6", {
     className: "carttext"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("b", null, "Other people want this."), " Over 20 people have this in their carts right now."));
@@ -63567,7 +63567,7 @@ var App = /*#__PURE__*/function (_React$Component) {
   return App;
 }(react__WEBPACK_IMPORTED_MODULE_6__.Component);
 
-react_dom__WEBPACK_IMPORTED_MODULE_7__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(App, null), document.getElementById('addToCart')); //Client-side design by Devon Poston - SDC TEAM: Slack me for questions
+react_dom__WEBPACK_IMPORTED_MODULE_7__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_6__.createElement(App, null), document.getElementById('addToCart')); //Client-side design by Devon Poston - SDC TEAM:Slack me for questions
 })();
 
 /******/ })()
