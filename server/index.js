@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const shrinkRay = require('shrink-ray-current');
 const db = require('../database/index.js');
 const fakeData = require('../fakeData/fakeData.js');
 const faker = require('faker');
@@ -8,6 +9,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const port = 3000;
 
+app.use(shrinkRay());
 app.use(express.static('client/dist'));
 app.use(morgan('dev'));
 app.use(cors());
@@ -15,7 +17,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get('/addtocart', (req, res) => {
-  //=====================SEEDING FUNCTION============================//
+  //=====================SEEDING FUNCTION: Part 2 of 2 ============================//
   // for (let i = 1; i < 101; i++) {
   //   let dummyData = {
   //     itemId: i,
@@ -51,6 +53,27 @@ app.get('/addtocart/:itemId', (req, res) => {
       res.status(200).send(data[0]);
     }
   });
+  // res.setHeader('Content-Type', 'text/event-stream');
+  // res.setHeader('Cache-Control', 'no-cache');
+
+  // // send a ping approx every 2 seconds
+  // const timer = setInterval(() => {
+  //   db.find({itemId: req.params.itemId}, (err, data) => {
+  //     if (err) {
+  //       res.status(400).send(err);
+  //     } else {
+  //       console.log('SERVER POST-DATA:', data[0]);
+  //       res.status(200).send(data[0]);
+  //     }
+  //   });
+
+  //   // !!! this is the important part
+  //   res.flush();
+  // }, 2000);
+
+  // res.on('close', () => {
+  //   clearInterval(timer);
+  // });
 });
 
 app.listen(port, () => {

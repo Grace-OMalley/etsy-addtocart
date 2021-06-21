@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/addToCart', {useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost/addToCart');
 let db = mongoose.connection;
 
 db.once('open', () => {

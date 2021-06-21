@@ -35,6 +35,13 @@ class App extends React.Component {
         item: data
       });
     });
+    //=======SEEDING FUNCTION: Part 1 of 2 - Go to server/index.js =======//
+    // API.readAll((data) => {
+    //   console.log('CLIENT: ', data);
+    //   this.setState({
+    //     item: data
+    //   });
+    // });
   }
 
   detailClick() {

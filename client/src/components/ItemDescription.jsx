@@ -30,18 +30,18 @@ const ItemDescription = (props) => {
           <input className="learnmore" type="button" defaultValue="Learn more about this item" onClick={() => props.expandClick()}/>
         </div>
       </div>
-    )
-  } else if (!props.toggle){
+    );
+  } else if (!props.toggle) {
     return (
       <div className="desc">
         <div className="descheader" onClick={() => props.descClick()}>
           <h4>Description</h4>
           <img className="uparrowflip" src="arrowUp.png"></img>
         </div>
-        <br/>
+        <br />
         <h6 className="desctexthide">{props.item.itemDescription}</h6>
       </div>
-    )
+    );
   }
 };
 
